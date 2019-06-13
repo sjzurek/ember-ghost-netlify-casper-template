@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   let ENV = {
-    modulePrefix: 'ember-ghost-casper-blog',
+    modulePrefix: 'empress-blog-casper',
     environment,
     rootURL: '/',
     locationType: 'auto',
@@ -10,7 +10,7 @@ module.exports = function(environment) {
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
-        // e.g. 'with-controller': true
+        // e.g. EMBER_NATIVE_DECORATOR_SUPPORT: true
       },
       EXTEND_PROTOTYPES: {
         // Prevent Ember Data from overriding Date.parse.
@@ -24,7 +24,7 @@ module.exports = function(environment) {
     },
 
     blog: {
-      title: 'Ember Ghost',
+      title: 'empress-blog',
       description: 'Static Blog System - Built with Ember',
       coverImage: '/images/blog-cover.jpg',
 
@@ -36,6 +36,16 @@ module.exports = function(environment) {
         route: 'page',
         id: 'chris-manson'
       }]
+    },
+
+    'responsive-image': {
+      sourceDir: 'images',
+      destinationDir: 'responsive-images',
+      quality: 80,
+      supportedWidths: [2000, 1000, 600, 300],
+      removeSourceDir: false,
+      justCopy: false,
+      extensions: ['jpg', 'jpeg', 'png', 'gif']
     }
   };
 
